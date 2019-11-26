@@ -1,0 +1,938 @@
+【异常时间】：2019-05-22 13:49:05,912 
+LoginControllerLogin
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 13:49:11,530 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 13:49:11,586 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 13:49:14,274 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 13:49:22,601 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 13:50:45,957 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 13:51:10,404 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 13:51:22,354 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 13:51:24,251 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 13:51:28,284 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 13:51:28,285 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 13:51:28,326 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 13:51:30,609 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 13:53:11,224 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 13:53:11,256 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 13:53:17,646 
+LoginControllerLogin
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 13:53:18,731 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 13:53:18,768 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 13:53:21,098 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 13:53:33,531 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 13:53:33,545 
+http://10.61.140.95:8089
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 13:54:25,043 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 13:54:28,138 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 13:54:28,151 
+http://10.61.140.95:8089
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 13:56:18,671 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 13:56:20,949 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 13:56:20,968 
+http://10.61.140.95:8089
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 13:56:35,407 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 13:56:35,443 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 13:56:43,621 
+LoginControllerLogin
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 13:56:44,678 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 13:56:44,738 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 13:57:31,336 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 13:57:32,969 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 13:57:32,979 
+http://10.61.140.95:8089
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 13:58:45,899 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 13:58:45,914 
+http://10.61.140.95:8089
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 14:00:06,641 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 14:00:06,733 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 14:00:16,755 
+LoginControllerLogin
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 14:00:18,203 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 14:00:18,233 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 14:00:20,518 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 14:00:22,119 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 14:00:22,136 
+http://10.61.140.95:8089
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 14:00:37,379 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 14:00:37,553 
+【自定义错误】：Object reference not set to an instance of an object. 
+【异常类型】：NullReferenceException 
+【异常信息】：Object reference not set to an instance of an object. 
+【堆栈调用】：   at SCHCWebAPI.ImageImp.GetInvOrderDocDetl(String fileurl, String Sal_DIDStr) in e:\SCHCWebAPI\SCHCWebAPI\DAL\ImageImp.cs:line 74
+   at SCHCWebAPI.Controllers.OrderController.DownInvOrderDoc(String Sal_DIDStr) in e:\SCHCWebAPI\SCHCWebAPI\Controllers\OrderController.cs:line 225
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextExceptionFilterAsync()
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 14:00:37,592 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 14:02:03,874 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 14:02:03,918 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 14:02:26,362 
+LoginControllerLogin
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 14:02:32,167 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 14:02:32,227 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 14:02:38,108 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 14:02:45,750 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 14:02:53,013 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 14:02:53,051 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 14:07:31,997 
+LoginControllerLogin
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 14:07:41,038 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 14:07:41,088 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 14:07:53,034 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 14:08:44,488 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 14:08:44,849 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 14:08:54,273 
+LoginControllerLogin
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 14:14:45,460 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 14:15:33,433 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 14:16:48,678 
+LoginControllerLogin
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 14:18:44,826 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 14:18:55,078 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 14:20:59,492 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 14:21:25,822 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 14:53:01,357 
+LoginControllerLogin
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 14:53:25,820 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 14:53:31,091 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 14:54:01,052 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 14:54:16,547 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 14:54:16,574 
+http://10.61.140.95:8089
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 14:54:48,232 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 14:56:17,442 
+LoginControllerLogin
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 14:56:25,836 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 14:56:25,870 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 14:56:28,785 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 14:56:32,931 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 14:56:40,282 
+LoginControllerLogin
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 14:56:40,571 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 14:56:40,612 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 14:56:43,260 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 14:56:57,307 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 14:56:57,642 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 14:56:57,642 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 14:56:57,824 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 14:57:16,848 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 14:57:17,508 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 14:57:17,533 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 14:57:17,725 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 14:57:20,468 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 14:57:21,124 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 14:57:21,126 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 14:57:21,304 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 14:57:23,895 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 14:57:23,909 
+http://10.61.140.95:8089
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 14:57:27,320 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 14:57:27,334 
+http://10.61.140.95:8089
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 14:57:31,348 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 14:57:31,975 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 14:57:31,975 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 14:57:32,157 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 14:57:33,661 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 14:57:34,849 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 14:57:36,810 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 14:57:37,464 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 14:57:37,464 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 14:57:37,519 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 14:57:38,672 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 14:58:52,632 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 14:58:54,014 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 14:58:54,056 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 14:59:19,883 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 14:59:24,007 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 14:59:24,042 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 14:59:30,098 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 14:59:30,098 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 14:59:30,133 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 14:59:56,417 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 14:59:56,780 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 14:59:56,817 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 14:59:56,998 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 15:00:01,506 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 15:00:01,848 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 15:00:01,853 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 15:00:01,892 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 15:00:21,322 
+LoginControllerLogin
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 15:00:22,522 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 15:00:22,557 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 15:00:26,111 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 15:00:29,801 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 15:00:32,215 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 15:00:41,882 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 15:00:43,071 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 15:00:43,180 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 15:00:48,134 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 15:00:48,818 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 15:00:51,997 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 15:00:54,985 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 15:00:57,276 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 15:00:57,285 
+http://10.61.140.95:8089
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 15:01:09,424 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 15:01:09,758 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 15:01:09,760 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 15:01:09,990 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 15:01:14,735 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 15:01:15,846 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 15:01:16,927 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 15:01:20,990 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 15:06:47,019 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 15:06:48,329 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 15:06:48,370 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 15:06:51,172 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 15:06:52,999 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 15:06:53,012 
+http://10.61.140.95:8089
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 15:08:09,953 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 15:08:10,407 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 15:08:10,407 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 15:08:10,453 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 15:08:56,562 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 15:08:56,988 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 15:08:57,025 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 15:08:57,194 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 15:10:42,811 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 15:10:43,001 
+【自定义错误】：Object reference not set to an instance of an object. 
+【异常类型】：NullReferenceException 
+【异常信息】：Object reference not set to an instance of an object. 
+【堆栈调用】：   at SCHCWebAPI.ImageImp.GetInvOrderDocDetl(String fileurl, String Sal_DIDStr) in e:\SCHCWebAPI\SCHCWebAPI\DAL\ImageImp.cs:line 74
+   at SCHCWebAPI.Controllers.OrderController.DownInvOrderDoc(String Sal_DIDStr) in e:\SCHCWebAPI\SCHCWebAPI\Controllers\OrderController.cs:line 225
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextExceptionFilterAsync()
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 15:10:43,043 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 15:10:57,667 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 15:10:57,747 
+【自定义错误】：Object reference not set to an instance of an object. 
+【异常类型】：NullReferenceException 
+【异常信息】：Object reference not set to an instance of an object. 
+【堆栈调用】：   at SCHCWebAPI.ImageImp.GetInvOrderDocDetl(String fileurl, String Sal_DIDStr) in e:\SCHCWebAPI\SCHCWebAPI\DAL\ImageImp.cs:line 74
+   at SCHCWebAPI.Controllers.OrderController.DownInvOrderDoc(String Sal_DIDStr) in e:\SCHCWebAPI\SCHCWebAPI\Controllers\OrderController.cs:line 225
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextExceptionFilterAsync()
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 15:10:57,774 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 15:11:15,198 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 15:11:16,003 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 15:11:16,007 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 15:11:16,199 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 15:11:39,714 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 15:11:39,795 
+【自定义错误】：Object reference not set to an instance of an object. 
+【异常类型】：NullReferenceException 
+【异常信息】：Object reference not set to an instance of an object. 
+【堆栈调用】：   at SCHCWebAPI.ImageImp.GetInvOrderDocDetl(String fileurl, String Sal_DIDStr) in e:\SCHCWebAPI\SCHCWebAPI\DAL\ImageImp.cs:line 74
+   at SCHCWebAPI.Controllers.OrderController.DownInvOrderDoc(String Sal_DIDStr) in e:\SCHCWebAPI\SCHCWebAPI\Controllers\OrderController.cs:line 225
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextExceptionFilterAsync()
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 15:11:39,827 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 15:12:10,832 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 15:12:10,915 
+【自定义错误】：Object reference not set to an instance of an object. 
+【异常类型】：NullReferenceException 
+【异常信息】：Object reference not set to an instance of an object. 
+【堆栈调用】：   at SCHCWebAPI.ImageImp.GetInvOrderDocDetl(String fileurl, String Sal_DIDStr) in e:\SCHCWebAPI\SCHCWebAPI\DAL\ImageImp.cs:line 74
+   at SCHCWebAPI.Controllers.OrderController.DownInvOrderDoc(String Sal_DIDStr) in e:\SCHCWebAPI\SCHCWebAPI\Controllers\OrderController.cs:line 225
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextExceptionFilterAsync()
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 15:12:10,944 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 15:15:10,908 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 15:15:21,422 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 15:15:21,505 
+【自定义错误】：Object reference not set to an instance of an object. 
+【异常类型】：NullReferenceException 
+【异常信息】：Object reference not set to an instance of an object. 
+【堆栈调用】：   at SCHCWebAPI.ImageImp.GetInvOrderDocDetl(String fileurl, String Sal_DIDStr) in e:\SCHCWebAPI\SCHCWebAPI\DAL\ImageImp.cs:line 74
+   at SCHCWebAPI.Controllers.OrderController.DownInvOrderDoc(String Sal_DIDStr) in e:\SCHCWebAPI\SCHCWebAPI\Controllers\OrderController.cs:line 225
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextExceptionFilterAsync()
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 15:15:21,532 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 15:19:37,984 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 15:19:39,462 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 15:20:26,130 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 15:20:29,417 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 15:25:51,005 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 15:27:01,785 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 15:27:36,331 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 15:27:55,288 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 15:28:19,859 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 17:25:08,964 
+LoginControllerLogin
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 17:25:11,491 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 17:25:11,533 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 17:25:14,878 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 17:25:17,122 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 17:25:17,138 
+http://10.61.140.95:8089
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 17:25:47,284 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 17:26:21,530 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 17:26:22,924 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 17:27:12,034 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 17:27:52,613 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 17:27:57,314 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 17:28:31,754 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 17:28:31,913 
+【自定义错误】：Object reference not set to an instance of an object. 
+【异常类型】：NullReferenceException 
+【异常信息】：Object reference not set to an instance of an object. 
+【堆栈调用】：   at SCHCWebAPI.ImageImp.GetInvOrderDocDetl(String fileurl, String Sal_DIDStr) in e:\SCHCWebAPI\SCHCWebAPI\DAL\ImageImp.cs:line 74
+   at SCHCWebAPI.Controllers.OrderController.DownInvOrderDoc(String Sal_DIDStr) in e:\SCHCWebAPI\SCHCWebAPI\Controllers\OrderController.cs:line 225
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextExceptionFilterAsync()
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 17:28:31,951 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 17:34:12,948 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 17:35:06,995 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 17:36:02,555 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 17:36:31,892 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 17:36:32,439 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 17:36:32,444 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 17:36:32,486 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 17:37:46,144 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 17:37:54,957 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 17:38:03,655 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 17:40:21,153 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 17:40:24,496 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 17:40:25,428 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 17:40:25,441 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 17:40:25,478 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 17:40:29,561 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 17:40:30,061 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 17:40:30,068 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 17:40:30,262 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 17:40:36,977 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 17:41:43,839 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 17:41:44,362 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 17:41:44,362 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 17:41:44,578 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 17:41:54,749 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 17:41:55,425 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 17:41:55,435 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 17:41:55,641 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 17:42:11,172 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 17:42:11,684 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 17:42:11,686 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 17:42:11,896 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 17:42:35,340 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 17:42:35,881 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 17:42:35,881 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 17:42:36,086 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 17:42:38,939 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 17:42:46,835 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 17:43:04,482 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 17:43:04,983 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 17:43:04,985 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 17:43:05,187 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 17:43:31,437 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 17:43:31,955 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 17:43:31,955 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 17:43:32,211 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 17:46:13,111 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 17:46:13,629 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 17:46:13,632 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 17:46:13,670 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 17:46:17,654 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 17:46:18,243 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 17:46:18,251 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 17:46:18,433 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 17:46:23,667 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 17:46:24,244 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 17:46:24,244 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 17:46:24,422 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 17:46:36,911 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 17:46:37,468 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 17:46:37,470 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 17:46:37,680 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 17:47:19,986 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 17:47:20,617 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 17:47:20,617 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 17:47:20,831 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 17:47:33,780 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------
+【异常时间】：2019-05-22 17:48:30,552 
+TokenAuthMiddlewareInvoke
+--------------------------------------------------------------------

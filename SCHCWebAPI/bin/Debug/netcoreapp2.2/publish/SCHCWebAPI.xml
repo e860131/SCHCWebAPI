@@ -1,0 +1,2392 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SCHCWebAPI</name>
+    </assembly>
+    <members>
+        <member name="T:SCHCWebAPI.Controllers.BaseController">
+            <summary>
+            基础Controller
+            </summary>
+        </member>
+        <member name="M:SCHCWebAPI.Controllers.BaseController.#ctor(AutoMapper.IMapper,SCHCWebAPI.IRedisCacheManager,SCHCWebAPI.ILoggerHelper,Microsoft.AspNetCore.Http.IHttpContextAccessor,Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:SCHCWebAPI.Controllers.BaseController.Token">
+            <summary>
+            返回Token
+            </summary>
+        </member>
+        <member name="P:SCHCWebAPI.Controllers.BaseController.Oper">
+            <summary>
+            返回操作人
+            </summary>
+        </member>
+        <member name="P:SCHCWebAPI.Controllers.BaseController.OperID">
+            <summary>
+            返回操作人编码
+            </summary>
+        </member>
+        <member name="P:SCHCWebAPI.Controllers.BaseController.BaseRedisCacheManager">
+            <summary>
+            返回缓存接口信息
+            </summary>
+        </member>
+        <member name="P:SCHCWebAPI.Controllers.BaseController.BaseMapper">
+            <summary>
+            返回AutoMap接口
+            </summary>
+        </member>
+        <member name="P:SCHCWebAPI.Controllers.BaseController.BaseConfiguration">
+            <summary>
+            配置文件接口
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:SCHCWebAPI.Controllers.BaseController.BaseLoggerHelper">
+            <summary>
+            返回日志接口
+            </summary>
+        </member>
+        <member name="P:SCHCWebAPI.Controllers.BaseController.Current">
+            <summary>
+            获取HttpContext
+            </summary>
+        </member>
+        <member name="P:SCHCWebAPI.Controllers.BaseController.IP">
+            <summary>
+            获取访问的ip
+            </summary>
+        </member>
+        <member name="P:SCHCWebAPI.Controllers.BaseController.user">
+            <summary>
+            获取用户信息
+            </summary>
+            <value></value>
+        </member>
+        <member name="M:SCHCWebAPI.Controllers.BaseController.GetCachEmploye(System.String,SCHCWebAPI.IRedisCacheManager)">
+            <summary>
+            获取缓存中的人员实体
+            </summary>
+            <param name="token"></param>
+            <param name="_redisCacheManager"></param>
+            <returns></returns>
+        </member>
+        <member name="T:SCHCWebAPI.Controllers.LoginController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:SCHCWebAPI.Controllers.LoginController.#ctor(SCHCWebAPI.IRedisCacheManager,AutoMapper.IMapper,Microsoft.AspNetCore.Http.IHttpContextAccessor,SCHCWebAPI.ILoggerHelper,AuthorizePolicy.JWT.PermissionRequirement)">
+            <summary>
+            构造函数注入
+            </summary>
+            <param name="redisCacheManager"></param>
+            <param name="_mapper"></param>
+            <param name="contextAccessor"></param>
+            <param name="loggerHelper"></param>
+            <param name="requirement"></param>
+        </member>
+        <member name="M:SCHCWebAPI.Controllers.LoginController.LoginAPI(System.String,System.String,System.String,System.Int32)">
+            <summary>
+            登陆认证
+            </summary>
+            <param name="account">用户名/手机号</param>
+            <param name="password">密码/验证码</param>
+            <param name="Platform">平台(web,android,ios,other)</param>
+            <param name="appid">app编码</param>
+            <param name="ismobile">手机号登录(1:是,0:否),默认0</param>
+            <returns></returns>
+        </member>
+        <member name="M:SCHCWebAPI.Controllers.LoginController.Denied">
+            <summary>
+            拒绝访问
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:SCHCWebAPI.Controllers.OrderController">
+            <summary>
+            材料接口
+            </summary>
+        </member>
+        <member name="M:SCHCWebAPI.Controllers.OrderController.#ctor(AutoMapper.IMapper,SCHCWebAPI.IRedisCacheManager,SCHCWebAPI.ILoggerHelper,Microsoft.AspNetCore.Http.IHttpContextAccessor,Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            
+            </summary>
+            <param name="mapper"></param>
+            <param name="redisCacheManager"></param>
+            <param name="loggerHelper"></param>
+            <param name="httpContextAccessor"></param>
+            <param name="configuration"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SCHCWebAPI.Controllers.OrderController.GetCatBatchCheckDoc(System.String,System.String,System.String,System.Int32)">
+            <summary>
+            获取药检单记录记录
+            </summary>
+            <param name="CatName">品种检索</param>
+            <param name="opdatebegin">开始时间</param>
+            <param name="batchno">批号</param>
+            <param name="pageindex">页码</param>
+            <returns></returns>
+        </member>
+        <member name="M:SCHCWebAPI.Controllers.OrderController.GetCatDoc(System.String,System.Int32)">
+            <summary>
+            获取品种材料记录
+            </summary>
+            <param name="CatName">品种检索</param>
+            <param name="pageindex">页码</param>
+            <returns></returns>
+        </member>
+        <member name="M:SCHCWebAPI.Controllers.OrderController.GetInvOrderInfo(System.String,System.String,System.String,System.String,System.String,System.Int32)">
+            <summary>
+            获取两票制订单
+            </summary>
+            <param name="CatName">品种检索</param>
+            <param name="batchno">批号检索</param>
+            <param name="Sal_ID">订单检索</param>
+            <param name="begindate">开始时间</param>
+            <param name="endate">结束时间</param>
+            <param name="pageindex">页码</param>
+            <returns></returns>
+        </member>
+        <member name="M:SCHCWebAPI.Controllers.OrderController.ViewCatBatchDetl(System.String)">
+            <summary>
+            预览品种,批号对应的药检单路径明细
+            </summary>
+            <param name="CatBatchStr">110@77^88@99</param>
+            <returns></returns>
+        </member>
+        <member name="M:SCHCWebAPI.Controllers.OrderController.ViewCatDocDetl(System.String)">
+            <summary>
+            预览品种对应的材料路径明细
+            </summary>
+            <param name="Cat_IDStr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SCHCWebAPI.Controllers.OrderController.ViewInvOrderDocDetl(System.String)">
+            <summary>
+            预览对应销售明细单号的材料路径明细
+            </summary>
+            <param name="Sal_DIDStr">明细单号字符串,如:1832@24323</param>
+            <returns></returns>
+        </member>
+        <member name="M:SCHCWebAPI.Controllers.OrderController.DownCatBatchDetl(System.String)">
+            <summary>
+            批量下载品种,批号药检单材料
+            </summary>
+            <param name="CatBatchStr"></param>
+        </member>
+        <member name="M:SCHCWebAPI.Controllers.OrderController.DownCatDoc(System.String)">
+            <summary>
+            批量下载品种材料
+            </summary>
+            <param name="Cat_IDStr"></param>
+        </member>
+        <member name="M:SCHCWebAPI.Controllers.OrderController.DownInvOrderDoc(System.String)">
+            <summary>
+            批量下载两票制材料
+            </summary>
+            <param name="Sal_DIDStr"></param>
+        </member>
+        <member name="M:SCHCWebAPI.Controllers.OrderController.Logout">
+            <summary>
+            退出登陆
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SCHCWebAPI.Controllers.OrderController.ChangePasswd(System.String)">
+            <summary>
+            修改用户密码
+            </summary>
+            <param name="Pwd"></param>
+            <returns></returns>
+        </member>
+        <member name="T:SCHCWebAPI.CatBatchCheckDocImp">
+            <summary>
+            药检单
+            </summary>
+        </member>
+        <member name="M:SCHCWebAPI.CatBatchCheckDocImp.GetCatBatchCheckDoc(System.String,System.String,System.String,System.String,System.Int32)">
+            <summary>
+            获取药检单记录
+            </summary>
+            <param name="cst_id"></param>
+            <param name="CatName"></param>
+            <param name="opdatebegin"></param>
+            <param name="batchno"></param>
+            <param name="pageindex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SCHCWebAPI.CatBatchCheckDocImp.GetCatBatchCount(System.String,System.String,System.String,System.String)">
+            <summary>
+            获取药检条目数
+            </summary>
+            <param name="cst_id"></param>
+            <param name="CatName"></param>
+            <param name="opdatebegin"></param>
+            <param name="batchno"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SCHCWebAPI.CatDocImp.GetCatDoc(System.String,System.String,System.Int32)">
+            <summary>
+            获取品种材料记录
+            </summary>
+            <param name="cst_id"></param>
+            <param name="CatName"></param>
+            <param name="pageindex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SCHCWebAPI.CatDocImp.GetCatDocCount(System.String,System.String)">
+            <summary>
+            获取品种材料记录数
+            </summary>
+            <param name="cst_id"></param>
+            <param name="CatName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SCHCWebAPI.ImageImp.GetCatBatchDetl(System.String,System.String)">
+            <summary>
+            获取品种,批号对应的药检单路径明细
+            </summary>
+            <param name="fileurl"></param>
+            <param name="CatBatchStr">110@77^88@99</param>
+            <returns></returns>
+        </member>
+        <member name="M:SCHCWebAPI.ImageImp.GetCatDocDetl(System.String,System.String)">
+            <summary>
+            获取品种对应的材料路径明细
+            </summary>
+            <param name="fileurl"></param>
+            <param name="Cat_IDStr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SCHCWebAPI.ImageImp.GetInvOrderDocDetl(System.String,System.String)">
+            <summary>
+            获取对应销售明细单号的材料路径明细
+            </summary>
+            <param name="fileurl"></param>
+            <param name="Sal_DIDStr">明细单号字符串,如:1832@24323</param>
+            <returns></returns>
+        </member>
+        <member name="M:SCHCWebAPI.OrderImp.GetOrderInfo(System.String,System.String,System.String,System.String,System.String,System.String,System.Int32)">
+            <summary>
+            获取订单信息
+            </summary>
+            <param name="cst_id"></param>
+            <param name="CatName"></param>
+            <param name="batchno"></param>
+            <param name="Sal_ID"></param>
+            <param name="begindate"></param>
+            <param name="endate"></param>
+            <param name="pageindex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SCHCWebAPI.OrderImp.GetOrderCount(System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            获取订单记录数
+            </summary>
+            <param name="cst_id"></param>
+            <param name="CatName"></param>
+            <param name="batchno"></param>
+            <param name="Sal_ID"></param>
+            <param name="begindate"></param>
+            <param name="endate"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SCHCWebAPI.UserImp.Login(System.String,System.String,System.String)">
+            <summary>
+            登陆验证
+            </summary>
+            <param name="username">用户名</param>
+            <param name="password">密码</param>
+            <param name="Platform">平台</param>
+            <returns></returns>
+        </member>
+        <member name="M:SCHCWebAPI.UserImp.ChangePwd(System.String,System.String,System.Int32)">
+            <summary>
+            修改密码
+            </summary>
+            <param name="Cst_ID">系统编码</param>
+            <param name="password">密码</param>
+            <param name="LoginType">类型(0,1,2)</param>
+            <returns></returns>
+        </member>
+        <member name="T:SCHCWebAPI.Program">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:SCHCWebAPI.Program.Main(System.String[])">
+            <summary>
+            
+            </summary>
+            <param name="args"></param>
+        </member>
+        <member name="M:SCHCWebAPI.Program.CreateWebHostBuilder(System.String[])">
+            <summary>
+            
+            </summary>
+            <param name="args"></param>
+            <returns></returns>
+        </member>
+        <member name="T:SCHCWebAPI.Startup">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:SCHCWebAPI.Startup.repository">
+            <summary>
+            log4net 仓储库
+            </summary>
+        </member>
+        <member name="M:SCHCWebAPI.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="configuration"></param>
+        </member>
+        <member name="P:SCHCWebAPI.Startup.Configuration">
+            <summary>
+            配置接口
+            </summary>
+        </member>
+        <member name="M:SCHCWebAPI.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            This method gets called by the runtime. Use this method to add services to the container.
+            </summary>
+            <param name="services"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SCHCWebAPI.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IHostingEnvironment)">
+            <summary>
+            This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+            </summary>
+            <param name="app"></param>
+            <param name="env"></param>
+        </member>
+        <member name="T:SCHCWebAPI.CacheAOP">
+            <summary>
+            面向切面的缓存使用
+            </summary>
+        </member>
+        <member name="M:SCHCWebAPI.CacheAOP.#ctor(SCHCWebAPI.ICaching)">
+            <summary>
+            
+            </summary>
+            <param name="cache"></param>
+        </member>
+        <member name="M:SCHCWebAPI.CacheAOP.Intercept(Castle.DynamicProxy.IInvocation)">
+            <summary>
+            
+            </summary>
+            <param name="invocation"></param>
+        </member>
+        <member name="T:SCHCWebAPI.LogAOP">
+            <summary>
+            拦截器LogAOP 继承IInterceptor接口
+            </summary>
+        </member>
+        <member name="M:SCHCWebAPI.LogAOP.Intercept(Castle.DynamicProxy.IInvocation)">
+            <summary>
+            实例化IInterceptor唯一方法 
+            </summary>
+            <param name="invocation">包含被拦截方法的信息</param>
+        </member>
+        <member name="T:SCHCWebAPI.RedisCacheAOP">
+            <summary>
+            面向切面的缓存使用
+            </summary>
+        </member>
+        <member name="M:SCHCWebAPI.RedisCacheAOP.#ctor(SCHCWebAPI.IRedisCacheManager)">
+            <summary>
+            
+            </summary>
+            <param name="cache"></param>
+        </member>
+        <member name="M:SCHCWebAPI.RedisCacheAOP.Intercept(Castle.DynamicProxy.IInvocation)">
+            <summary>
+            
+            </summary>
+            <param name="invocation"></param>
+        </member>
+        <member name="T:SCHCWebAPI.CachingAttribute">
+            <summary>
+            这个Attribute就是使用时候的验证，把它添加到要缓存数据的方法中，即可完成缓存的操作。
+            </summary>
+        </member>
+        <member name="P:SCHCWebAPI.CachingAttribute.AbsoluteExpiration">
+            <summary>
+            缓存绝对过期时间（分钟）
+            </summary>
+        </member>
+        <member name="T:SCHCWebAPI.TokenAuthMiddleware">
+            <summary>
+            You may need to install the Microsoft.AspNetCore.Http.Abstractions package into your project
+            </summary>
+        </member>
+        <member name="M:SCHCWebAPI.TokenAuthMiddleware.#ctor(Microsoft.AspNetCore.Http.RequestDelegate,SCHCWebAPI.IRedisCacheManager,Microsoft.Extensions.Configuration.IConfiguration,SCHCWebAPI.ILoggerHelper)">
+            <summary>
+            
+            </summary>
+            <param name="next"></param>
+            <param name="redisCacheManager"></param>
+            <param name="configuration"></param>
+            <param name="loggerHelper"></param>
+        </member>
+        <member name="M:SCHCWebAPI.TokenAuthMiddleware.Invoke(Microsoft.AspNetCore.Http.HttpContext)">
+            <summary>
+            
+            </summary>
+            <param name="httpContext"></param>
+            <returns></returns>
+        </member>
+        <member name="T:SCHCWebAPI.TokenAuthMiddlewareExtensions">
+            <summary>
+            Extension method used to add the middleware to the HTTP request pipeline.
+            </summary>
+        </member>
+        <member name="M:SCHCWebAPI.TokenAuthMiddlewareExtensions.UseTokenAuthMiddleware(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="builder"></param>
+            <returns></returns>
+        </member>
+        <member name="T:SCHCWebAPI.GlobalExceptionsFilter">
+            <summary>
+            全局异常错误日志
+            </summary>
+        </member>
+        <member name="M:SCHCWebAPI.GlobalExceptionsFilter.#ctor(Microsoft.AspNetCore.Hosting.IHostingEnvironment,SCHCWebAPI.ILoggerHelper)">
+            <summary>
+            
+            </summary>
+            <param name="env"></param>
+            <param name="loggerHelper"></param>
+        </member>
+        <member name="M:SCHCWebAPI.GlobalExceptionsFilter.OnException(Microsoft.AspNetCore.Mvc.Filters.ExceptionContext)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:SCHCWebAPI.GlobalExceptionsFilter.WriteLog(System.String,System.Exception)">
+            <summary>
+            自定义返回格式
+            </summary>
+            <param name="throwMsg"></param>
+            <param name="ex"></param>
+            <returns></returns>
+        </member>
+        <member name="T:SCHCWebAPI.InternalServerErrorObjectResult">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:SCHCWebAPI.InternalServerErrorObjectResult.#ctor(System.Object)">
+            
+        </member>
+        <member name="T:SCHCWebAPI.JsonErrorResponse">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:SCHCWebAPI.JsonErrorResponse.code">
+            <summary>
+            代码
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:SCHCWebAPI.JsonErrorResponse.message">
+            <summary>
+            生产环境的消息
+            </summary>
+        </member>
+        <member name="T:SCHCWebAPI.Appsettings">
+            <summary>
+            appsettings.json操作类
+            </summary>
+        </member>
+        <member name="M:SCHCWebAPI.Appsettings.app(System.String[])">
+            <summary>
+            封装要操作的字符
+            </summary>
+            <param name="sections"></param>
+            <returns></returns>
+        </member>
+        <member name="T:SCHCWebAPI.ConvertHelper">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:SCHCWebAPI.ConvertHelper.ObjToInt(System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="thisValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SCHCWebAPI.ConvertHelper.ObjToInt(System.Object,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="thisValue"></param>
+            <param name="errorValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SCHCWebAPI.ConvertHelper.ObjToMoney(System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="thisValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SCHCWebAPI.ConvertHelper.ObjToMoney(System.Object,System.Double)">
+            <summary>
+            
+            </summary>
+            <param name="thisValue"></param>
+            <param name="errorValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SCHCWebAPI.ConvertHelper.ObjToString(System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="thisValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SCHCWebAPI.ConvertHelper.ObjToString(System.Object,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="thisValue"></param>
+            <param name="errorValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SCHCWebAPI.ConvertHelper.ObjToDecimal(System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="thisValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SCHCWebAPI.ConvertHelper.ObjToDecimal(System.Object,System.Decimal)">
+            <summary>
+            
+            </summary>
+            <param name="thisValue"></param>
+            <param name="errorValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SCHCWebAPI.ConvertHelper.ObjToDate(System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="thisValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SCHCWebAPI.ConvertHelper.ObjToDate(System.Object,System.DateTime)">
+            <summary>
+            
+            </summary>
+            <param name="thisValue"></param>
+            <param name="errorValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SCHCWebAPI.ConvertHelper.ObjToBool(System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="thisValue"></param>
+            <returns></returns>
+        </member>
+        <member name="P:SCHCWebAPI.ConvertHelper.GetGuid">
+            <summary>
+            获取一个全球唯一码GUID字符串
+            </summary>
+        </member>
+        <member name="M:SCHCWebAPI.ConvertHelper.CreateNo">
+            <summary>
+            自动生成编号  201008251145409865
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SCHCWebAPI.ConvertHelper.RndNum(System.Int32)">
+            <summary>
+            生成0-9随机数
+            </summary>
+            <param name="codeNum">生成长度</param>
+            <returns></returns>
+        </member>
+        <member name="M:SCHCWebAPI.HtmlHelper.ReplaceHtmlTag(System.String,System.Int32)">
+            <summary>
+            去除富文本中的HTML标签
+            </summary>
+            <param name="html"></param>
+            <param name="length"></param>
+            <returns></returns>
+        </member>
+        <member name="T:SCHCWebAPI.RecursionHelper">
+            <summary>
+            泛型递归求树形结构
+            </summary>
+        </member>
+        <member name="M:SCHCWebAPI.SerializeHelper.Serialize(System.Object)">
+            <summary>
+            序列化
+            </summary>
+            <param name="item"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SCHCWebAPI.SerializeHelper.Deserialize``1(System.Byte[])">
+            <summary>
+            反序列化
+            </summary>
+            <typeparam name="TEntity"></typeparam>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SCHCWebAPI.UnicodeHelper.StringToUnicode(System.String)">
+            <summary>
+            字符串转Unicode码
+            </summary>
+            <returns>The to unicode.</returns>
+            <param name="value">Value.</param>
+        </member>
+        <member name="M:SCHCWebAPI.UnicodeHelper.UnicodeToString(System.String)">
+            <summary>
+            Unicode转字符串
+            </summary>
+            <returns>The to string.</returns>
+            <param name="unicode">Unicode.</param>
+        </member>
+        <member name="M:SCHCWebAPI.UnicodeHelper.GetUTF8(System.String)">
+            <summary>
+            UFT8编码
+            </summary>
+            <param name="unicodeString"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SCHCWebAPI.UnicodeHelper.GetQueryCondition(System.String)">
+            <summary>
+            2,3,4,5 =>('2','3','4','5')
+            </summary>
+            <param name="condition"></param>
+            <returns></returns>
+        </member>
+        <member name="T:SCHCWebAPI.ILoggerHelper">
+            <summary>
+            日志接口
+            </summary>
+        </member>
+        <member name="M:SCHCWebAPI.ILoggerHelper.Debug(System.Object,System.String)">
+            <summary>
+            调试信息
+            </summary>
+            <param name="source">source</param>
+            <param name="message">message</param>
+        </member>
+        <member name="M:SCHCWebAPI.ILoggerHelper.Debug(System.Object,System.String,System.Object[])">
+            <summary>
+            调试信息
+            </summary>
+            <param name="source">source</param>
+            <param name="message">message</param>
+            <param name="ps">ps</param>
+        </member>
+        <member name="M:SCHCWebAPI.ILoggerHelper.Debug(System.Type,System.String)">
+            <summary>
+            调试信息
+            </summary>
+            <param name="source">source</param>
+            <param name="message">message</param>
+        </member>
+        <member name="M:SCHCWebAPI.ILoggerHelper.Info(System.Object,System.Object)">
+            <summary>
+            关键信息
+            </summary>
+            <param name="source">source</param>
+            <param name="message">message</param>
+        </member>
+        <member name="M:SCHCWebAPI.ILoggerHelper.Info(System.Type,System.Object)">
+            <summary>
+            关键信息
+            </summary>
+            <param name="source">source</param>
+            <param name="message">message</param>
+        </member>
+        <member name="M:SCHCWebAPI.ILoggerHelper.Warn(System.Object,System.Object)">
+            <summary>
+            警告信息
+            </summary>
+            <param name="source">source</param>
+            <param name="message">message</param>
+        </member>
+        <member name="M:SCHCWebAPI.ILoggerHelper.Warn(System.Type,System.Object)">
+            <summary>
+            警告信息
+            </summary>
+            <param name="source">source</param>
+            <param name="message">message</param>
+        </member>
+        <member name="M:SCHCWebAPI.ILoggerHelper.Error(System.Object,System.Object)">
+            <summary>
+            错误信息
+            </summary>
+            <param name="source">source</param>
+            <param name="message">message</param>
+        </member>
+        <member name="M:SCHCWebAPI.ILoggerHelper.Error(System.Type,System.Object)">
+            <summary>
+            错误信息
+            </summary>
+            <param name="source">source</param>
+            <param name="message">message</param>
+        </member>
+        <member name="M:SCHCWebAPI.ILoggerHelper.Fatal(System.Object,System.Object)">
+            <summary>
+            失败信息
+            </summary>
+            <param name="source">source</param>
+            <param name="message">message</param>
+        </member>
+        <member name="M:SCHCWebAPI.ILoggerHelper.Fatal(System.Type,System.Object)">
+            <summary>
+            失败信息
+            </summary>
+            <param name="source">source</param>
+            <param name="message">message</param>
+        </member>
+        <member name="M:SCHCWebAPI.ILoggerHelper.Debug(System.Object,System.Object,System.Exception)">
+            <summary>
+            调试信息
+            </summary>
+            <param name="source">source</param>
+            <param name="message">message</param>
+            <param name="exception">ex</param>
+        </member>
+        <member name="M:SCHCWebAPI.ILoggerHelper.Debug(System.Type,System.Object,System.Exception)">
+            <summary>
+            调试信息
+            </summary>
+            <param name="source">source</param>
+            <param name="message">message</param>
+            <param name="exception">ex</param>
+        </member>
+        <member name="M:SCHCWebAPI.ILoggerHelper.Info(System.Object,System.Object,System.Exception)">
+            <summary>
+            关键信息
+            </summary>
+            <param name="source">source</param>
+            <param name="message">message</param>
+            <param name="exception">ex</param>
+        </member>
+        <member name="M:SCHCWebAPI.ILoggerHelper.Info(System.Type,System.Object,System.Exception)">
+            <summary>
+            关键信息
+            </summary>
+            <param name="source">source</param>
+            <param name="message">message</param>
+            <param name="exception">ex</param>
+        </member>
+        <member name="M:SCHCWebAPI.ILoggerHelper.Warn(System.Object,System.Object,System.Exception)">
+            <summary>
+            警告信息
+            </summary>
+            <param name="source">source</param>
+            <param name="message">message</param>
+            <param name="exception">ex</param>
+        </member>
+        <member name="M:SCHCWebAPI.ILoggerHelper.Warn(System.Type,System.Object,System.Exception)">
+            <summary>
+            警告信息
+            </summary>
+            <param name="source">source</param>
+            <param name="message">message</param>
+            <param name="exception">ex</param>
+        </member>
+        <member name="M:SCHCWebAPI.ILoggerHelper.Error(System.Object,System.Object,System.Exception)">
+            <summary>
+            错误信息
+            </summary>
+            <param name="source">source</param>
+            <param name="message">message</param>
+            <param name="exception">ex</param>
+        </member>
+        <member name="M:SCHCWebAPI.ILoggerHelper.Error(System.Type,System.Object,System.Exception)">
+            <summary>
+            错误信息
+            </summary>
+            <param name="source">source</param>
+            <param name="message">message</param>
+            <param name="exception">ex</param>
+        </member>
+        <member name="M:SCHCWebAPI.ILoggerHelper.Fatal(System.Object,System.Object,System.Exception)">
+            <summary>
+            失败信息
+            </summary>
+            <param name="source">source</param>
+            <param name="message">message</param>
+            <param name="exception">ex</param>
+        </member>
+        <member name="M:SCHCWebAPI.ILoggerHelper.Fatal(System.Type,System.Object,System.Exception)">
+            <summary>
+            失败信息
+            </summary>
+            <param name="source">source</param>
+            <param name="message">message</param>
+            <param name="exception">ex</param>
+        </member>
+        <member name="T:SCHCWebAPI.LogHelper">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:SCHCWebAPI.LogHelper.GetLogger(System.Type)">
+            <summary>
+            获取记录器
+            </summary>
+            <param name="source">soruce</param>
+            <returns></returns>
+        </member>
+        <member name="M:SCHCWebAPI.LogHelper.Debug(System.Object,System.String)">
+            <summary>
+            调试信息
+            </summary>
+            <param name="source">source</param>
+            <param name="message">message</param>
+        </member>
+        <member name="M:SCHCWebAPI.LogHelper.Debug(System.Object,System.String,System.Object[])">
+            <summary>
+            调试信息
+            </summary>
+            <param name="source">source</param>
+            <param name="message">message</param>
+            <param name="ps">ps</param>
+        </member>
+        <member name="M:SCHCWebAPI.LogHelper.Debug(System.Type,System.String)">
+            <summary>
+            调试信息
+            </summary>
+            <param name="source">source</param>
+            <param name="message">message</param>
+        </member>
+        <member name="M:SCHCWebAPI.LogHelper.Info(System.Object,System.Object)">
+            <summary>
+            关键信息
+            </summary>
+            <param name="source">source</param>
+            <param name="message">message</param>
+        </member>
+        <member name="M:SCHCWebAPI.LogHelper.Info(System.Type,System.Object)">
+            <summary>
+            关键信息
+            </summary>
+            <param name="source">source</param>
+            <param name="message">message</param>
+        </member>
+        <member name="M:SCHCWebAPI.LogHelper.Warn(System.Object,System.Object)">
+            <summary>
+            警告信息
+            </summary>
+            <param name="source">source</param>
+            <param name="message">message</param>
+        </member>
+        <member name="M:SCHCWebAPI.LogHelper.Warn(System.Type,System.Object)">
+            <summary>
+            警告信息
+            </summary>
+            <param name="source">source</param>
+            <param name="message">message</param>
+        </member>
+        <member name="M:SCHCWebAPI.LogHelper.Error(System.Object,System.Object)">
+            <summary>
+            错误信息
+            </summary>
+            <param name="source">source</param>
+            <param name="message">message</param>
+        </member>
+        <member name="M:SCHCWebAPI.LogHelper.Error(System.Type,System.Object)">
+            <summary>
+            错误信息
+            </summary>
+            <param name="source">source</param>
+            <param name="message">message</param>
+        </member>
+        <member name="M:SCHCWebAPI.LogHelper.Fatal(System.Object,System.Object)">
+            <summary>
+            失败信息
+            </summary>
+            <param name="source">source</param>
+            <param name="message">message</param>
+        </member>
+        <member name="M:SCHCWebAPI.LogHelper.Fatal(System.Type,System.Object)">
+            <summary>
+            失败信息
+            </summary>
+            <param name="source">source</param>
+            <param name="message">message</param>
+        </member>
+        <member name="M:SCHCWebAPI.LogHelper.Debug(System.Object,System.Object,System.Exception)">
+            <summary>
+            调试信息
+            </summary>
+            <param name="source">source</param>
+            <param name="message">message</param>
+            <param name="exception">ex</param>
+        </member>
+        <member name="M:SCHCWebAPI.LogHelper.Debug(System.Type,System.Object,System.Exception)">
+            <summary>
+            调试信息
+            </summary>
+            <param name="source">source</param>
+            <param name="message">message</param>
+            <param name="exception">ex</param>
+        </member>
+        <member name="M:SCHCWebAPI.LogHelper.Info(System.Object,System.Object,System.Exception)">
+            <summary>
+            关键信息
+            </summary>
+            <param name="source">source</param>
+            <param name="message">message</param>
+            <param name="exception">ex</param>
+        </member>
+        <member name="M:SCHCWebAPI.LogHelper.Info(System.Type,System.Object,System.Exception)">
+            <summary>
+            关键信息
+            </summary>
+            <param name="source">source</param>
+            <param name="message">message</param>
+            <param name="exception">ex</param>
+        </member>
+        <member name="M:SCHCWebAPI.LogHelper.Warn(System.Object,System.Object,System.Exception)">
+            <summary>
+            警告信息
+            </summary>
+            <param name="source">source</param>
+            <param name="message">message</param>
+            <param name="exception">ex</param>
+        </member>
+        <member name="M:SCHCWebAPI.LogHelper.Warn(System.Type,System.Object,System.Exception)">
+            <summary>
+            警告信息
+            </summary>
+            <param name="source">source</param>
+            <param name="message">message</param>
+            <param name="exception">ex</param>
+        </member>
+        <member name="M:SCHCWebAPI.LogHelper.Error(System.Object,System.Object,System.Exception)">
+            <summary>
+            错误信息
+            </summary>
+            <param name="source">source</param>
+            <param name="message">message</param>
+            <param name="exception">ex</param>
+        </member>
+        <member name="M:SCHCWebAPI.LogHelper.Error(System.Type,System.Object,System.Exception)">
+            <summary>
+            错误信息
+            </summary>
+            <param name="source">source</param>
+            <param name="message">message</param>
+            <param name="exception">ex</param>
+        </member>
+        <member name="M:SCHCWebAPI.LogHelper.Fatal(System.Object,System.Object,System.Exception)">
+            <summary>
+            失败信息
+            </summary>
+            <param name="source">source</param>
+            <param name="message">message</param>
+            <param name="exception">ex</param>
+        </member>
+        <member name="M:SCHCWebAPI.LogHelper.Fatal(System.Type,System.Object,System.Exception)">
+            <summary>
+            失败信息
+            </summary>
+            <param name="source">source</param>
+            <param name="message">message</param>
+            <param name="exception">ex</param>
+        </member>
+        <member name="T:SCHCWebAPI.ICaching">
+            <summary>
+            简单的缓存接口，只有查询和添加，以后会进行扩展
+            </summary>
+        </member>
+        <member name="M:SCHCWebAPI.ICaching.Get(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="cacheKey"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SCHCWebAPI.ICaching.Set(System.String,System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="cacheKey"></param>
+            <param name="cacheValue"></param>
+        </member>
+        <member name="T:SCHCWebAPI.MemoryCaching">
+            <summary>
+            实例化缓存接口ICaching
+            </summary>
+        </member>
+        <member name="M:SCHCWebAPI.MemoryCaching.#ctor(Microsoft.Extensions.Caching.Memory.IMemoryCache)">
+            <summary>
+            
+            </summary>
+            <param name="cache"></param>
+        </member>
+        <member name="M:SCHCWebAPI.MemoryCaching.Get(System.String)">
+            获取缓存  
+        </member>
+        <member name="M:SCHCWebAPI.MemoryCaching.Set(System.String,System.Object)">
+            设置缓存
+        </member>
+        <member name="T:SCHCWebAPI.APIStatusCode">
+            状态码
+        </member>
+        <member name="F:SCHCWebAPI.APIStatusCode.Success">
+            <summary>
+            成功
+            </summary>
+        </member>
+        <member name="F:SCHCWebAPI.APIStatusCode.NeedRelogin">
+            <summary>
+            重新登陆
+            </summary>
+        </member>
+        <member name="F:SCHCWebAPI.APIStatusCode.Failed">
+            <summary>
+            Token验证失败
+            </summary>
+        </member>
+        <member name="F:SCHCWebAPI.APIStatusCode.NeedAppUpdate">
+            <summary>
+            需要更新
+            </summary>
+        </member>
+        <member name="F:SCHCWebAPI.APIStatusCode.Unknown">
+            <summary>
+            未知码
+            </summary>
+        </member>
+        <member name="T:SCHCWebAPI.ImageUrl">
+            <summary>
+            图片路径
+            </summary>
+        </member>
+        <member name="P:SCHCWebAPI.ImageUrl.src">
+            <summary>
+            图片路径
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:SCHCWebAPI.ImageUrl.name">
+            <summary>
+            图片名称
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:SCHCWebAPI.Login">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:SCHCWebAPI.Login.Status">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="P:SCHCWebAPI.Login.access_token">
+            <summary>
+            身份令牌
+            </summary>
+        </member>
+        <member name="P:SCHCWebAPI.Login.expires_in">
+            <summary>
+            有效期
+            </summary>
+        </member>
+        <member name="P:SCHCWebAPI.Login.token_type">
+            <summary>
+            身份令牌类型
+            </summary>
+        </member>
+        <member name="P:SCHCWebAPI.Login.employee">
+            <summary>
+            员工实体
+            </summary>
+        </member>
+        <member name="T:SCHCWebAPI.ResponseResult">
+            <summary>
+            响应结果类
+            </summary>
+        </member>
+        <member name="P:SCHCWebAPI.ResponseResult.code">
+            <summary>
+            状态(0-default, 1-success, -1-error)
+            </summary>
+        </member>
+        <member name="P:SCHCWebAPI.ResponseResult.message">
+            <summary>
+            消息内容
+            </summary>
+        </member>
+        <member name="P:SCHCWebAPI.ResponseResult.entity">
+            <summary>
+            数据
+            </summary>
+        </member>
+        <member name="P:SCHCWebAPI.ResponseResult.totalRowsCount">
+            <summary>
+            总行数
+            </summary>
+        </member>
+        <member name="M:SCHCWebAPI.ResponseResult.Default(System.String)">
+            <summary>
+            响应消息封装类
+            </summary>
+            <param name="message"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SCHCWebAPI.ResponseResult.Success(System.String)">
+            <summary>
+            响应消息封装类
+            </summary>
+            <param name="message"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SCHCWebAPI.ResponseResult.Success(System.Object,System.String)">
+            响应消息封装类
+        </member>
+        <member name="M:SCHCWebAPI.ResponseResult.Error(System.String)">
+            <summary>
+            响应消息封装类
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SCHCWebAPI.ResponseResult.Error(SCHCWebAPI.APIStatusCode,System.String)">
+            <summary>
+            Http 响应消息封装类
+            </summary>
+            <param name="message"></param>
+            <param name="SuccessCode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SCHCWebAPI.ResponseResult.Deserialize(System.String)">
+            
+        </member>
+        <member name="T:SCHCWebAPI.SignedUser">
+            <summary>
+            已经登录的用户
+            </summary>
+        </member>
+        <member name="P:SCHCWebAPI.SignedUser.userToken">
+            <summary>
+            jwt签名凭证
+            </summary>
+        </member>
+        <member name="P:SCHCWebAPI.SignedUser.UserID">
+            <summary>
+            用户唯一id名
+            </summary>
+        </member>
+        <member name="P:SCHCWebAPI.SignedUser.validateTime">
+            <summary>
+            有效期
+            </summary>
+        </member>
+        <member name="P:SCHCWebAPI.SignedUser.employee">
+            <summary>
+            用户信息
+            </summary>
+        </member>
+        <member name="P:SCHCWebAPI.SignedUser.Platform">
+            <summary>
+            平台
+            </summary>
+        </member>
+        <member name="P:SCHCWebAPI.SignedUser.LoginType">
+            <summary>
+            登录类型
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:SCHCWebAPI.User">
+            <summary>
+            员工、职员 
+            </summary>
+        </member>
+        <member name="P:SCHCWebAPI.User.UserID">
+            <summary>
+            编码
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:SCHCWebAPI.User.UsreName">
+            <summary>
+            名称
+            </summary>		
+        </member>
+        <member name="P:SCHCWebAPI.User.LoginType">
+            <summary>
+            登录类型(0:人员,1:供货人,2:客户)
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:SCHCWebAPI.AESCrypto">
+            <summary>
+            加密/解密
+            </summary>
+        </member>
+        <member name="M:SCHCWebAPI.AESCrypto.AESEncrypt(System.String)">
+            <summary>
+            加密
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SCHCWebAPI.AESCrypto.AESDecrypt(System.String)">
+            <summary>
+            解密
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="T:SCHCWebAPI.EntityAttribute">
+            <summary>
+            实体类扩展属性
+            </summary>
+        </member>
+        <member name="T:SCHCWebAPI.MessageHelper">
+            <summary>
+            消息帮助类
+            </summary>
+        </member>
+        <member name="F:SCHCWebAPI.MessageHelper.NoEnabled">
+            <summary>
+            废弃状态
+            </summary>
+        </member>
+        <member name="F:SCHCWebAPI.MessageHelper.Enabled">
+            <summary>
+            正常状态
+            </summary>
+        </member>
+        <member name="F:SCHCWebAPI.MessageHelper.NoDeleteMark">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:SCHCWebAPI.MessageHelper.DeleteMark">
+            <summary>
+            正常状态
+            </summary>
+        </member>
+        <member name="F:SCHCWebAPI.MessageHelper.CacheHour_1">
+            <summary>
+            缓存时间
+            </summary>
+        </member>
+        <member name="F:SCHCWebAPI.MessageHelper.GetQuery">
+            <summary>
+            缓存key-分页
+            </summary>
+        </member>
+        <member name="F:SCHCWebAPI.MessageHelper.RowTotal">
+            <summary>
+            缓存key-总记录
+            </summary>
+        </member>
+        <member name="F:SCHCWebAPI.MessageHelper.PAGESIZE">
+            <summary>
+            每页条目数
+            </summary>
+        </member>
+        <member name="F:SCHCWebAPI.MessageHelper.PAGEINDEX">
+            <summary>
+            默认页码
+            </summary>
+        </member>
+        <member name="F:SCHCWebAPI.MessageHelper.Need_Validate">
+            <summary>
+            需要人员验证
+            </summary>
+        </member>
+        <member name="F:SCHCWebAPI.MessageHelper.NoNeed_Validate">
+            <summary>
+            不需要人员验证
+            </summary>
+        </member>
+        <member name="F:SCHCWebAPI.MessageHelper.SALORDER">
+            <summary>
+            销售订单
+            </summary>
+        </member>
+        <member name="F:SCHCWebAPI.MessageHelper.SALRETURN">
+            <summary>
+            退货
+            </summary>
+        </member>
+        <member name="F:SCHCWebAPI.MessageHelper.ALREADYPAY">
+            <summary>
+            已回款
+            </summary>
+        </member>
+        <member name="F:SCHCWebAPI.MessageHelper.NEEDPAY">
+            <summary>
+            待回款
+            </summary>
+        </member>
+        <member name="F:SCHCWebAPI.MessageHelper.SALINVOICE">
+            <summary>
+            开票
+            </summary>
+        </member>
+        <member name="F:SCHCWebAPI.MessageHelper.Obtain">
+            <summary>
+            获取
+            </summary>
+        </member>
+        <member name="F:SCHCWebAPI.MessageHelper.SUCCESS">
+            <summary>
+            成功
+            </summary>
+        </member>
+        <member name="F:SCHCWebAPI.MessageHelper.FAILD">
+            <summary>
+            失败
+            </summary>
+        </member>
+        <member name="F:SCHCWebAPI.MessageHelper.NORMAL">
+            <summary>
+            正常
+            </summary>
+        </member>
+        <member name="F:SCHCWebAPI.MessageHelper.CANCEL">
+            <summary>
+            否决
+            </summary>
+        </member>
+        <member name="F:SCHCWebAPI.MessageHelper.PENDING">
+            <summary>
+            待处理
+            </summary>
+        </member>
+        <member name="F:SCHCWebAPI.MessageHelper.SUSPENDED">
+            <summary>
+            挂起
+            </summary>
+        </member>
+        <member name="F:SCHCWebAPI.MessageHelper.APPROVE">
+            <summary>
+            认可
+            </summary>
+        </member>
+        <member name="F:SCHCWebAPI.MessageHelper.Request">
+            <summary>
+            请求
+            </summary>
+        </member>
+        <member name="F:SCHCWebAPI.MessageHelper.APPLY">
+            <summary>
+            申请
+            </summary>
+        </member>
+        <member name="F:SCHCWebAPI.MessageHelper.UNDO">
+            <summary>
+            取消
+            </summary>
+        </member>
+        <member name="F:SCHCWebAPI.MessageHelper.ABANDON">
+            <summary>
+            废弃
+            </summary>
+        </member>
+        <member name="F:SCHCWebAPI.MessageHelper.FIRST_APPROVE">
+            <summary>
+            初审通过
+            </summary>
+        </member>
+        <member name="F:SCHCWebAPI.MessageHelper.FINAL_APPROVE">
+            <summary>
+            终审通过
+            </summary>
+        </member>
+        <member name="F:SCHCWebAPI.MessageHelper.LAW_APPROVE">
+            <summary>
+            法务审核通过
+            </summary>
+        </member>
+        <member name="F:SCHCWebAPI.MessageHelper.FIN_APPROVE">
+            <summary>
+            财务审核通过
+            </summary>
+        </member>
+        <member name="F:SCHCWebAPI.MessageHelper.Lar_APPROVE">
+            <summary>
+            大区审核通过
+            </summary>
+        </member>
+        <member name="F:SCHCWebAPI.MessageHelper.ProMan_APPROVE">
+            <summary>
+            产品经理审核通过
+            </summary>
+        </member>
+        <member name="F:SCHCWebAPI.MessageHelper.ProLen_APPROVE">
+            <summary>
+            产品组长审核通过
+            </summary>
+        </member>
+        <member name="F:SCHCWebAPI.MessageHelper.BUS_APPROVE">
+            <summary>
+            总监审核通过
+            </summary>
+        </member>
+        <member name="F:SCHCWebAPI.MessageHelper.ORDER_OUTED">
+            <summary>
+            已出库
+            </summary>
+        </member>
+        <member name="F:SCHCWebAPI.MessageHelper.ORDER_RECV">
+            <summary>
+            已收货
+            </summary>
+        </member>
+        <member name="F:SCHCWebAPI.MessageHelper.Cfm_Apr">
+            <summary>
+            已确认
+            </summary>
+        </member>
+        <member name="F:SCHCWebAPI.MessageHelper.UnreceivedGoods">
+            <summary>
+            未收货
+            </summary>
+        </member>
+        <member name="F:SCHCWebAPI.MessageHelper.Unconfirmed">
+            <summary>
+            未确认
+            </summary>
+        </member>
+        <member name="F:SCHCWebAPI.MessageHelper.ADD">
+            <summary>
+            新增
+            </summary>
+        </member>
+        <member name="F:SCHCWebAPI.MessageHelper.UPDATE">
+            <summary>
+            修改
+            </summary>
+        </member>
+        <member name="F:SCHCWebAPI.MessageHelper.DELETE">
+            <summary>
+            删除
+            </summary>
+        </member>
+        <member name="F:SCHCWebAPI.MessageHelper.PBU">
+            <summary>
+            已发布
+            </summary>
+        </member>
+        <member name="F:SCHCWebAPI.MessageHelper.DopSType">
+            <summary>
+            保证金转款
+            </summary>
+        </member>
+        <member name="F:SCHCWebAPI.MessageHelper.WHS_TYPE_OA">
+            <summary>
+            OA专用
+            </summary>
+        </member>
+        <member name="F:SCHCWebAPI.MessageHelper.PayType">
+            <summary>
+            付款类型
+            </summary>
+        </member>
+        <member name="F:SCHCWebAPI.MessageHelper.RecType">
+            <summary>
+            收款类型
+            </summary>
+        </member>
+        <member name="F:SCHCWebAPI.MessageHelper.DefaultMarketingOrgId">
+            <summary>
+            默认推广部门编码
+            </summary>
+        </member>
+        <member name="F:SCHCWebAPI.MessageHelper.DefaultBizOrgId">
+            <summary>
+            默认商务部门编码
+            </summary>
+        </member>
+        <member name="F:SCHCWebAPI.MessageHelper.GET_SAL_RECEIVABLES">
+            <summary>
+            获取人员信用额度信息
+            </summary>
+        </member>
+        <member name="F:SCHCWebAPI.MessageHelper.GET_USER_BRANCHED_PASSAGE">
+            <summary>
+            获取用户分管数据
+            </summary>
+        </member>
+        <member name="F:SCHCWebAPI.MessageHelper.GETBASBULLETINPAGE">
+            <summary>
+            获取公告信息
+            </summary>
+        </member>
+        <member name="F:SCHCWebAPI.MessageHelper.GET_SALCST_STOCK_LIST">
+            <summary>
+            公司库存表
+            </summary>
+        </member>
+        <member name="F:SCHCWebAPI.MessageHelper.GETCONFERENCECOUNT">
+            <summary>
+            获取市场活动汇总
+            </summary>
+        </member>
+        <member name="F:SCHCWebAPI.MessageHelper.GETFLWFIRSTHAPPEN">
+            <summary>
+            获取按初次发生流向日期统计
+            </summary>
+        </member>
+        <member name="F:SCHCWebAPI.MessageHelper.EMP_LOGIN">
+            <summary>
+            用户登陆
+            </summary>
+        </member>
+        <member name="F:SCHCWebAPI.MessageHelper.GET_LINKMAN_SUCCESS">
+            <summary>
+            获取通讯录
+            </summary>
+        </member>
+        <member name="F:SCHCWebAPI.MessageHelper.GETGOODSSHEETSUM">
+            <summary>
+            获取物品领用汇总表
+            </summary>
+        </member>
+        <member name="F:SCHCWebAPI.MessageHelper.GET_Org_SUCCESS">
+            <summary>
+            部门信息
+            </summary>
+        </member>
+        <member name="F:SCHCWebAPI.MessageHelper.GET_GOODS_SHEET_SUM">
+            <summary>
+            获取用户物品领用清单数据
+            </summary>
+        </member>
+        <member name="F:SCHCWebAPI.MessageHelper.GET_CATEGORY_RECORD">
+            <summary>
+            获取品种资料
+            </summary>
+        </member>
+        <member name="F:SCHCWebAPI.MessageHelper.GET_BUSSINESS_RECORD">
+            <summary>
+            获取商业档案
+            </summary>
+        </member>
+        <member name="F:SCHCWebAPI.MessageHelper.GET_HOSPITAL_RECORD">
+            <summary>
+            获取医院档案
+            </summary>
+        </member>
+        <member name="F:SCHCWebAPI.MessageHelper.GET_AGENT_RECORD">
+            <summary>
+            获取代理商档案
+            </summary>
+        </member>
+        <member name="F:SCHCWebAPI.MessageHelper.GET_EMP_PSN_LIST">
+            <summary>
+            获取人员市场分管
+            </summary>
+        </member>
+        <member name="F:SCHCWebAPI.MessageHelper.GET_SAL_FLOW_LIST">
+            <summary>
+            获取流向信息
+            </summary>
+        </member>
+        <member name="F:SCHCWebAPI.MessageHelper.GET_BIZAREA_YEAR_RATE">
+            <summary>
+            获取区域年度推广进度
+            </summary>
+        </member>
+        <member name="F:SCHCWebAPI.MessageHelper.GET_RM_YEAR_RATE">
+            <summary>
+            获取大区年度推广进度
+            </summary>
+        </member>
+        <member name="F:SCHCWebAPI.MessageHelper.GET_DM_YEAR_RATE">
+            <summary>
+            获取地区年度推广进度
+            </summary>
+        </member>
+        <member name="F:SCHCWebAPI.MessageHelper.GET_EMP_YEAR_RATE">
+            <summary>
+            获取人员年度推广进度
+            </summary>
+        </member>
+        <member name="F:SCHCWebAPI.MessageHelper.CHECK_EMP_ISVALIDATED_FAILD">
+            <summary>
+            非法员工编码
+            </summary>
+        </member>
+        <member name="F:SCHCWebAPI.MessageHelper.GET_SALCONTRACT_PAGE">
+            <summary>
+            获取销售协议数据
+            </summary>
+        </member>
+        <member name="F:SCHCWebAPI.MessageHelper.EMPLOYEEID_IS_NULL">
+            <summary>
+            员工编码为空
+            </summary>
+        </member>
+        <member name="F:SCHCWebAPI.MessageHelper.EMPLOYEE_MSG_NOTEXISTS">
+            <summary>
+            员工信息不存在
+            </summary>
+        </member>
+        <member name="F:SCHCWebAPI.MessageHelper.GET_EMPLIMITS_FAILD">
+            <summary>
+            获取App人员菜单权限失败
+            </summary>
+        </member>
+        <member name="F:SCHCWebAPI.MessageHelper.GET_EMPLIMITS_SUCCESS">
+            <summary>
+            获取App人员菜单权限成功
+            </summary>
+        </member>
+        <member name="F:SCHCWebAPI.MessageHelper.GET_SALORDERDER_LIST">
+            <summary>
+            获取订单信息
+            </summary>
+        </member>
+        <member name="F:SCHCWebAPI.MessageHelper.PAGESIZE_ISZERO">
+            <summary>
+            每页条目数不能为0
+            </summary>
+        </member>
+        <member name="F:SCHCWebAPI.MessageHelper.GET_LOGISTICS">
+            <summary>
+            获取物流数据
+            </summary>
+        </member>
+        <member name="F:SCHCWebAPI.MessageHelper.GET_STOCK_DATA">
+            <summary>
+            获取库存数据
+            </summary>
+        </member>
+        <member name="F:SCHCWebAPI.MessageHelper.GET_SALORDER_TODAY">
+            <summary>
+            获取今日订单明细
+            </summary>
+        </member>
+        <member name="F:SCHCWebAPI.MessageHelper.GST_WOCKWARNING_MSG">
+            <summary>
+            获取库存有效期预警数据
+            </summary>
+        </member>
+        <member name="F:SCHCWebAPI.MessageHelper.GET_FINACCOUNTS_PAYABLE">
+            <summary>
+            获取客户应收款数据
+            </summary>
+        </member>
+        <member name="F:SCHCWebAPI.MessageHelper.GET_FINCSTCATACCOUNTS_PAYABLE">
+            <summary>
+            获取客户应付款数据
+            </summary>
+        </member>
+        <member name="F:SCHCWebAPI.MessageHelper.GET_CUSTOMER_APPLY">
+            <summary>
+            获取开户汇总信息
+            </summary>
+        </member>
+        <member name="F:SCHCWebAPI.MessageHelper.GET_PERSONAL_PERFORMANCE_SAL">
+            <summary>
+            获取销售员工个人业绩
+            </summary>
+        </member>
+        <member name="F:SCHCWebAPI.MessageHelper.BUSSINESS">
+            <summary>
+            商务
+            </summary>
+        </member>
+        <member name="F:SCHCWebAPI.MessageHelper.GENERALIZE">
+            <summary>
+            推广
+            </summary>
+        </member>
+        <member name="F:SCHCWebAPI.MessageHelper.UNIONGENERALIZE">
+            <summary>
+            招商
+            </summary>
+        </member>
+        <member name="F:SCHCWebAPI.MessageHelper.SalFlowWhere">
+            <summary>
+            流向单
+            </summary>
+        </member>
+        <member name="F:SCHCWebAPI.MessageHelper.OrgWhere">
+            <summary>
+            部门分管
+            </summary>
+        </member>
+        <member name="F:SCHCWebAPI.MessageHelper.CstAndCatWhere">
+            <summary>
+            客户+品种
+            </summary>
+        </member>
+        <member name="F:SCHCWebAPI.MessageHelper.FailedToVerifyUsernamePassword">
+            <summary>
+            验证用户名密码失败
+            </summary>
+        </member>
+        <member name="F:SCHCWebAPI.MessageHelper.UserNameCannotBeEmpty">
+            <summary>
+            用户名不能为空
+            </summary>
+        </member>
+        <member name="F:SCHCWebAPI.MessageHelper.PasswordCannotBeEmpty">
+            <summary>
+            密码不能为空
+            </summary>
+        </member>
+        <member name="F:SCHCWebAPI.MessageHelper.PlatformCannotBeEmpty">
+            <summary>
+            平台不能为空
+            </summary>
+        </member>
+        <member name="F:SCHCWebAPI.MessageHelper.LandingSuccessfully">
+            <summary>
+            登陆成功
+            </summary>
+        </member>
+        <member name="F:SCHCWebAPI.MessageHelper.NoReturnContent">
+            <summary>
+            暂时无返回内容
+            </summary>
+        </member>
+        <member name="F:SCHCWebAPI.MessageHelper.PersonnelInformation">
+            <summary>
+            人员信息
+            </summary>
+        </member>
+        <member name="F:SCHCWebAPI.MessageHelper.MenuInformation">
+            <summary>
+            菜单信息
+            </summary>
+        </member>
+        <member name="F:SCHCWebAPI.MessageHelper.NoEmpty">
+            <summary>
+            不能为空
+            </summary>
+        </member>
+        <member name="F:SCHCWebAPI.MessageHelper.Action">
+            <summary>
+            操作
+            </summary>
+        </member>
+        <member name="F:SCHCWebAPI.MessageHelper.OKMESSAGE">
+            <summary>
+            操作成功
+            </summary>
+        </member>
+        <member name="F:SCHCWebAPI.MessageHelper.ERRORMESSAGE">
+            <summary>
+            操作失败
+            </summary>
+        </member>
+        <member name="F:SCHCWebAPI.MessageHelper.ValidationFailed">
+            <summary>
+            验证失败
+            </summary>
+        </member>
+        <member name="F:SCHCWebAPI.MessageHelper.VerificationCodeFailure">
+            <summary>
+            验证码失效
+            </summary>
+        </member>
+        <member name="F:SCHCWebAPI.MessageHelper.InvalidMobilePhoneNumber">
+            <summary>
+            手机号码无效
+            </summary>
+        </member>
+        <member name="T:SCHCWebAPI.FileHelper">
+            <summary>
+            文件操作类
+            </summary>
+        </member>
+        <member name="M:SCHCWebAPI.FileHelper.Read(System.String)">
+            <summary>
+            读文件
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SCHCWebAPI.FileHelper.Write(System.String,System.String)">
+            <summary>
+            写入文件
+            </summary>
+        </member>
+        <member name="M:SCHCWebAPI.FileHelper.StreamToBytes(System.IO.Stream)">
+            <summary>
+            将流读取到缓冲区中
+            </summary>
+            <param name="stream">原始流</param>
+        </member>
+        <member name="M:SCHCWebAPI.FileHelper.BytesToStream(System.Byte[])">
+            <summary>
+            将 byte[] 转成 Stream
+            </summary>
+        </member>
+        <member name="M:SCHCWebAPI.FileHelper.StreamToFile(System.IO.Stream,System.String)">
+            <summary>
+            将 Stream 写入文件
+            </summary>
+        </member>
+        <member name="M:SCHCWebAPI.FileHelper.FileToStream(System.String)">
+            <summary>
+            从文件读取 Stream
+            </summary>
+        </member>
+        <member name="M:SCHCWebAPI.FileHelper.IsExistFile(System.String)">
+            <summary>
+            返回文件是否存在
+            </summary>
+            <param name="filename">文件名</param>
+            <returns>是否存在</returns>
+        </member>
+        <member name="M:SCHCWebAPI.FileHelper.CopyFile(System.String,System.String,System.Boolean)">
+            <summary>
+            备份文件
+            </summary>
+            <param name="sourceFileName">源文件名</param>
+            <param name="destFileName">目标文件名</param>
+            <param name="overwrite">当目标文件存在时是否覆盖</param>
+            <returns>操作是否成功</returns>
+        </member>
+        <member name="M:SCHCWebAPI.FileHelper.CopyFile(System.String,System.String)">
+            <summary>
+            备份文件,当目标文件存在时覆盖
+            </summary>
+            <param name="sourceFileName">源文件名</param>
+            <param name="destFileName">目标文件名</param>
+            <returns>操作是否成功</returns>
+        </member>
+        <member name="M:SCHCWebAPI.FileHelper.GetDirectoryFileList(System.String,System.String)">
+            <summary>
+            获得指定目录下的文件列表
+            </summary>
+            <param name="path">路径</param>
+            <param name="searchPattern"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SCHCWebAPI.FileHelper.GetDirectoryFileList(System.String)">
+            <summary>
+            获取指定目录的所有文件列表
+            </summary>
+            <param name="path"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SCHCWebAPI.FileHelper.FileToBytes(System.String)">
+            <summary>
+            文件转字节流
+            </summary>
+            <param name="path">文件路径</param>
+            <returns></returns>
+        </member>
+        <member name="M:SCHCWebAPI.FileHelper.UpLoadFile(System.Byte[],System.String)">
+            <summary>
+            把流生成文件
+            </summary>
+            <param name="buffer">文件流</param>
+            <param name="filePath"></param>
+        </member>
+        <member name="M:SCHCWebAPI.FileHelper.CountSize(System.Int64)">
+            <summary>
+            计算文件大小函数(保留两位小数),Size为字节大小
+            </summary>
+            <param name="Size">初始文件大小</param>
+            <returns></returns>
+        </member>
+        <member name="M:SCHCWebAPI.FileHelper.GetFileSize(System.String)">
+            <summary>
+            根据文件名，得到文件的大小，单位分别是GB/MB/KB
+            </summary>
+            <param name="fileName">文件名</param>
+            <returns>返回文件大小</returns>
+        </member>
+        <member name="M:SCHCWebAPI.FileHelper.GetDictSize(System.String)">
+            <summary>
+            获取文件夹大小
+            </summary>
+            <param name="path"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SCHCWebAPI.FileHelper.DeleteFile(System.String)">
+            <summary>
+            删除文件
+            </summary>
+            <param name="filePath">文件路径</param>
+        </member>
+        <member name="M:SCHCWebAPI.FileHelper.DeleteDirAllFile(System.String)">
+            <summary>
+            删除文件夹下的所有文件
+            </summary>
+            <param name="dirRoot"></param>
+        </member>
+        <member name="M:SCHCWebAPI.FileHelper.DeleteDirectory(System.String)">
+            <summary>
+            删除非空文件夹
+            </summary>
+            <param name="path"></param>
+        </member>
+        <member name="M:SCHCWebAPI.FileHelper.DownloadFileByte(System.String)">
+            <summary>
+            文件转换文件流
+            </summary>
+            <param name="filePath">保存绝对路径</param>
+            <returns></returns>
+        </member>
+        <member name="M:SCHCWebAPI.FileHelper.CreateDirectory(System.String)">
+            <summary>
+            //如果不存在就创建file文件夹
+            </summary>
+            <param name="path"></param>
+        </member>
+        <member name="M:SCHCWebAPI.FileHelper.CreateZipFileByte(System.Collections.Generic.List{SCHCWebAPI.ImageUrl},System.String)">
+            <summary>
+            把图片压缩后转换成二进制
+            </summary>
+            <param name="filepath"></param>
+            <param name="zipFileName"></param>
+            <returns></returns>
+        </member>
+        <member name="T:SCHCWebAPI.IRedisCacheManager">
+            <summary>
+            Redis缓存接口
+            </summary>
+        </member>
+        <member name="M:SCHCWebAPI.RedisCacheManager.GetRedisConnection">
+            <summary>
+            核心代码，获取连接实例
+            通过双if 夹lock的方式，实现单例模式
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SCHCWebAPI.RedisCacheManager.Clear">
+            <summary>
+            清除
+            </summary>
+        </member>
+        <member name="M:SCHCWebAPI.RedisCacheManager.Get(System.String)">
+            <summary>
+            判断是否存在
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SCHCWebAPI.RedisCacheManager.GetValue(System.String)">
+            <summary>
+            查询
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SCHCWebAPI.RedisCacheManager.Get``1(System.String)">
+            <summary>
+            获取
+            </summary>
+            <typeparam name="TEntity"></typeparam>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SCHCWebAPI.RedisCacheManager.Remove(System.String)">
+            <summary>
+            移除
+            </summary>
+            <param name="key"></param>
+        </member>
+        <member name="M:SCHCWebAPI.RedisCacheManager.Set(System.String,System.Object,System.TimeSpan)">
+            <summary>
+            设置
+            </summary>
+            <param name="key"></param>
+            <param name="value"></param>
+            <param name="cacheTime"></param>
+        </member>
+        <member name="M:SCHCWebAPI.RedisCacheManager.SetValue(System.String,System.Byte[])">
+            <summary>
+            增加/修改
+            </summary>
+            <param name="key"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="F:SCHCWebAPI.BaseDBConfig.MasterWrite">
+            <summary>
+            主数据库连接字符串(写)
+            </summary>
+        </member>
+        <member name="M:SCHCWebAPI.BaseRepository`1.InitDbContext">
+            <summary>
+            初始化数据库连接
+            </summary>
+        </member>
+        <member name="M:SCHCWebAPI.BaseRepository`1.QueryById(System.Object,System.Boolean)">
+            <summary>
+            功能描述:根据ID查询一条数据
+            作　　者:
+            </summary>
+            <param name="objId">id（必须指定主键特性 [SugarColumn(IsPrimaryKey=true)]），如果是联合主键，请使用Where条件</param>
+            <param name="blnUseCache">是否使用缓存</param>
+            <returns>数据实体</returns>
+        </member>
+        <member name="M:SCHCWebAPI.BaseRepository`1.QueryByIDs(System.Object[])">
+            <summary>
+            功能描述:根据ID查询数据
+            作　　者:
+            </summary>
+            <param name="lstIds">id列表（必须指定主键特性 [SugarColumn(IsPrimaryKey=true)]），如果是联合主键，请使用Where条件</param>
+            <returns>数据实体列表</returns>
+        </member>
+        <member name="M:SCHCWebAPI.BaseRepository`1.Add(`0)">
+            <summary>
+            写入实体数据
+            </summary>
+            <param name="entity">实体类</param>
+            <returns></returns>
+        </member>
+        <member name="M:SCHCWebAPI.BaseRepository`1.Update(`0)">
+            <summary>
+            更新实体数据
+            </summary>
+            <param name="entity">实体类</param>
+            <returns></returns>
+        </member>
+        <member name="M:SCHCWebAPI.BaseRepository`1.Delete(`0)">
+            <summary>
+            根据实体删除一条数据
+            </summary>
+            <param name="entity">实体类</param>
+            <returns></returns>
+        </member>
+        <member name="M:SCHCWebAPI.BaseRepository`1.DeleteById(System.Object)">
+            <summary>
+            删除指定ID的数据
+            </summary>
+            <param name="id">主键ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:SCHCWebAPI.BaseRepository`1.DeleteByIds(System.Object[])">
+            <summary>
+            删除指定ID集合的数据(批量删除)
+            </summary>
+            <param name="ids">主键ID集合</param>
+            <returns></returns>
+        </member>
+        <member name="M:SCHCWebAPI.BaseRepository`1.Query">
+            <summary>
+            功能描述:查询所有数据
+            作　　者:
+            </summary>
+            <returns>数据列表</returns>
+        </member>
+        <member name="M:SCHCWebAPI.BaseRepository`1.Query(System.String)">
+            <summary>
+            功能描述:查询数据列表
+            作　　者:
+            </summary>
+            <param name="strWhere">条件</param>
+            <returns>数据列表</returns>
+        </member>
+        <member name="M:SCHCWebAPI.BaseRepository`1.Query(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            功能描述:查询数据列表
+            作　　者:
+            </summary>
+            <param name="whereExpression">whereExpression</param>
+            <returns>数据列表</returns>
+        </member>
+        <member name="M:SCHCWebAPI.BaseRepository`1.Query(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String)">
+            <summary>
+            功能描述:查询一个列表
+            作　　者:
+            </summary>
+            <param name="whereExpression">条件表达式</param>
+            <param name="strOrderByFileds">排序字段，如name asc,age desc</param>
+            <returns>数据列表</returns>
+        </member>
+        <member name="M:SCHCWebAPI.BaseRepository`1.Query(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Linq.Expressions.Expression{System.Func{`0,System.Object}},System.Boolean)">
+            <summary>
+            功能描述:查询一个列表
+            </summary>
+            <param name="whereExpression"></param>
+            <param name="orderByExpression"></param>
+            <param name="isAsc"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SCHCWebAPI.BaseRepository`1.Query(System.String,System.String)">
+            <summary>
+            功能描述:查询一个列表
+            作　　者:
+            </summary>
+            <param name="strWhere">条件</param>
+            <param name="strOrderByFileds">排序字段，如name asc,age desc</param>
+            <returns>数据列表</returns>
+        </member>
+        <member name="M:SCHCWebAPI.BaseRepository`1.Query(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Int32,System.String)">
+            <summary>
+            功能描述:查询前N条数据
+            作　　者:
+            </summary>
+            <param name="whereExpression">条件表达式</param>
+            <param name="intTop">前N条</param>
+            <param name="strOrderByFileds">排序字段，如name asc,age desc</param>
+            <returns>数据列表</returns>
+        </member>
+        <member name="M:SCHCWebAPI.BaseRepository`1.Query(System.String,System.Int32,System.String)">
+            <summary>
+            功能描述:查询前N条数据
+            作　　者:
+            </summary>
+            <param name="strWhere">条件</param>
+            <param name="intTop">前N条</param>
+            <param name="strOrderByFileds">排序字段，如name asc,age desc</param>
+            <returns>数据列表</returns>
+        </member>
+        <member name="M:SCHCWebAPI.BaseRepository`1.Query(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Int32,System.Int32,System.String)">
+            <summary>
+            功能描述:分页查询
+            作　　者:
+            </summary>
+            <param name="whereExpression">条件表达式</param>
+            <param name="intPageIndex">页码（下标0）</param>
+            <param name="intPageSize">页大小</param>
+            <param name="intTotalCount">数据总量</param>
+            <param name="strOrderByFileds">排序字段，如name asc,age desc</param>
+            <returns>数据列表</returns>
+        </member>
+        <member name="M:SCHCWebAPI.BaseRepository`1.Query(System.String,System.Int32,System.Int32,System.String)">
+            <summary>
+            功能描述:分页查询
+            作　　者:
+            </summary>
+            <param name="strWhere">条件</param>
+            <param name="intPageIndex">页码（下标0）</param>
+            <param name="intPageSize">页大小</param>
+            <param name="intTotalCount">数据总量</param>
+            <param name="strOrderByFileds">排序字段，如name asc,age desc</param>
+            <returns>数据列表</returns>
+        </member>
+        <member name="M:SCHCWebAPI.BaseRepository`1.Query(System.String,System.Int32,System.Int32,System.String,System.Int32@)">
+            <summary>
+            功能描述:分页查询
+            作　　者:
+            </summary>
+            <param name="strWhere">条件</param>
+            <param name="intPageIndex">页码（下标0）</param>
+            <param name="intPageSize">页大小</param>
+            <param name="intTotalCount">数据总量</param>
+            <param name="strOrderByFileds">排序字段，如name asc,age desc</param>
+            <returns>数据列表</returns>
+        </member>
+        <member name="P:SCHCWebAPI.DbContext.ConnectionString">
+            <summary>
+            连接字符串 
+            
+            </summary>
+        </member>
+        <member name="P:SCHCWebAPI.DbContext.DbType">
+            <summary>
+            数据库类型 
+             
+            </summary>
+        </member>
+        <member name="P:SCHCWebAPI.DbContext.Db">
+            <summary>
+            数据连接对象 
+             
+            </summary>
+        </member>
+        <member name="P:SCHCWebAPI.DbContext.Context">
+            <summary>
+            数据库上下文实例（自动关闭连接）
+             
+            </summary>
+        </member>
+        <member name="M:SCHCWebAPI.DbContext.#ctor">
+            <summary>
+            功能描述:构造函数
+            作　　者:
+            </summary>
+        </member>
+        <member name="M:SCHCWebAPI.DbContext.#ctor(System.Boolean)">
+            <summary>
+            功能描述:构造函数
+            作　　者:
+            </summary>
+            <param name="blnIsAutoCloseConnection">是否自动关闭连接</param>
+        </member>
+        <member name="M:SCHCWebAPI.DbContext.GetEntityDB``1">
+            <summary>
+            功能描述:获取数据库处理对象
+            作　　者:
+            </summary>
+            <returns>返回值</returns>
+        </member>
+        <member name="M:SCHCWebAPI.DbContext.GetEntityDB``1(SqlSugar.SqlSugarClient)">
+            <summary>
+            功能描述:获取数据库处理对象
+            作　　者:
+            </summary>
+            <param name="db">db</param>
+            <returns>返回值</returns>
+        </member>
+        <member name="M:SCHCWebAPI.DbContext.GetDbContext(System.Boolean)">
+            <summary>
+            功能描述:获得一个DbContext
+            作　　者:
+            </summary>
+            <param name="blnIsAutoCloseConnection">是否自动关闭连接（如果为false，则使用接受时需要手动关闭Db）</param>
+            <returns>返回值</returns>
+        </member>
+        <member name="M:SCHCWebAPI.DbContext.Init(System.String,System.Collections.Generic.List{SqlSugar.SlaveConnectionConfig},SqlSugar.DbType)">
+            <summary>
+            功能描述:设置初始化参数
+            作　　者:
+            </summary>
+            <param name="strConnectionString">连接字符串</param>
+            <param name="enmDbType">数据库类型</param>
+        </member>
+        <member name="M:SCHCWebAPI.DbContext.GetConnectionConfig(System.Boolean,System.Boolean)">
+            <summary>
+            功能描述:创建一个链接配置
+            作　　者:
+            </summary>
+            <param name="blnIsAutoCloseConnection">是否自动关闭连接</param>
+            <param name="blnIsShardSameThread">是否夸类事务</param>
+            <returns>ConnectionConfig</returns>
+        </member>
+        <member name="M:SCHCWebAPI.DbContext.GetCustomDB(SqlSugar.ConnectionConfig)">
+            <summary>
+            功能描述:获取一个自定义的DB
+            作　　者:
+            </summary>
+            <param name="config">config</param>
+            <returns>返回值</returns>
+        </member>
+        <member name="M:SCHCWebAPI.DbContext.GetCustomEntityDB``1(SqlSugar.SqlSugarClient)">
+            <summary>
+            功能描述:获取一个自定义的数据库处理对象
+            作　　者:
+            </summary>
+            <param name="sugarClient">sugarClient</param>
+            <returns>返回值</returns>
+        </member>
+        <member name="M:SCHCWebAPI.DbContext.GetCustomEntityDB``1(SqlSugar.ConnectionConfig)">
+            <summary>
+            功能描述:获取一个自定义的数据库处理对象
+            作　　者:
+            </summary>
+            <param name="config">config</param>
+            <returns>返回值</returns>
+        </member>
+        <member name="T:SCHCWebAPI.CustomApiVersion">
+            <summary>
+            自定义版本
+            </summary>
+        </member>
+        <member name="T:SCHCWebAPI.CustomApiVersion.ApiVersions">
+            <summary>
+            Api接口版本 自定义
+            </summary>
+        </member>
+        <member name="F:SCHCWebAPI.CustomApiVersion.ApiVersions.V1">
+            <summary>
+            V1 版本
+            </summary>
+        </member>
+        <member name="F:SCHCWebAPI.CustomApiVersion.ApiVersions.V2">
+            <summary>
+            V2 版本
+            </summary>
+        </member>
+        <member name="T:SCHCWebAPI.CustomRouteAttribute">
+            <summary>
+            自定义路由 /api/{version}/[controler]/[action]
+            </summary>
+        </member>
+        <member name="P:SCHCWebAPI.CustomRouteAttribute.GroupName">
+            <summary>
+            分组名称,是来实现接口 IApiDescriptionGroupNameProvider
+            </summary>
+        </member>
+        <member name="M:SCHCWebAPI.CustomRouteAttribute.#ctor(System.String)">
+            <summary>
+            自定义路由构造函数，继承基类路由
+            </summary>
+            <param name="actionName"></param>
+        </member>
+        <member name="M:SCHCWebAPI.CustomRouteAttribute.#ctor(SCHCWebAPI.CustomApiVersion.ApiVersions,System.String)">
+            <summary>
+            自定义版本+路由构造函数，继承基类路由
+            </summary>
+            <param name="actionName"></param>
+            <param name="version"></param>
+        </member>
+        <member name="T:SCHCWebAPI.SwaggerSecurityRequirementsDocumentFilter">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:SCHCWebAPI.SwaggerSecurityRequirementsDocumentFilter.Apply(Swashbuckle.AspNetCore.Swagger.SwaggerDocument,Swashbuckle.AspNetCore.SwaggerGen.DocumentFilterContext)">
+            
+        </member>
+        <member name="T:WJAPI.Controllers.IController`1">
+            <summary>
+            基础方法接口(新增,修改,删除,查询实体)
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:WJAPI.Controllers.IController`1.Insert(`0)">
+            <summary>
+            新增记录
+            </summary>
+            <param name="t"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WJAPI.Controllers.IController`1.Update(`0)">
+            <summary>
+            修改记录
+            </summary>
+            <param name="t"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WJAPI.Controllers.IController`1.Delete(System.String)">
+            <summary>
+            删除记录
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WJAPI.Controllers.IController`1.GetEntity(System.String)">
+            <summary>
+            获取实体
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="T:HCAPI.CustomProfile">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:HCAPI.CustomProfile.#ctor">
+            <summary>
+            配置构造函数，用来创建关系映射
+            </summary>
+        </member>
+    </members>
+</doc>
